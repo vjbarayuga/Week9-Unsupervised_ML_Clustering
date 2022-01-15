@@ -1,0 +1,60 @@
+Dimensionality Reduction - Interview Question Solutions
+
+1. Why would you want to use dimensionality reduction techniques to transform
+   your data before training?
+    - Dimensionality reduction can allow you to:
+        - Remove collinearity from the feature space
+        - Speed up training by reducing the number of features
+        - Reduce memory usage by reducing the number of features
+        - Identify underlying, latent features that impact multiple features in
+          the original space
+
+2. Why would you want to avoid dimensionality reduction techniques to transform
+   your data before training?
+    - Dimensionality reduction can:
+        - Add extra unnecessary computation
+        - Make the model difficult to interpret if the latent features are not
+          easy to understand
+        - Add complexity to the model pipeline
+        - Reduce the predictive power of the model if too much signal is lost
+
+3. Name a popular dimensionality reduction algorithm and briefly describe it.
+    - Principal component analysis (PCA) - uses an eigen decomposition to
+      transform the original feature data into linearly independent eigenvectors.
+      The most important vectors (with highest eigenvalues) are then selected to
+      represent the features in the transformed space
+
+4. After doing dimensionality reduction, can you transform the data back into
+   the original feature space? How?
+    - Yes and no. Most dimensionality reduction techniques have inverse
+      transformations, but signal is often lost when reducing dimensions,
+      so the inverse transformation is usually only an approximation of the original data.
+
+5. How do you select the number of principal components needed for PCA?
+    - Selecting the number of latent features to retain is typically done by
+      inspecting the eigenvalue of each eigenvector. As eigenvalues decrease,
+      the impact of the latent feature on the target variable also decreases.
+      This means that principal components with small eigenvalues have a small
+      impact on the model and can be removed. There are various rules of thumb,
+      but one general rule is to include the most significant principal components
+      that account for at least 95% of the variation in the features.
+
+6. When would you use PCA?
+    - PCA is great for dimensionality reduction. It can be used for visualizing
+      high-dimensional data or speeding up machine learning algorithms.
+
+7. Why would you perform PCA even if you don't have a lot of features?
+    - You can visualize data that is more than 3 dimensional using PCA.
+
+8. In what cases would you NOT use PCA?
+    - If you are mostly concerned with interpretability or keeping all of the features,
+      PCA might not be the best choice.
+
+9. What is the geometric interpretation of an eigenvector and eigenvalue?
+    - An eigenvector points in the direction of transformation. The eigenvalue is
+      the amount by which it is stretched.
+
+10. What is the algebraic interpretation of an eigenvector and eigenvalue?
+    - An eigenvector is a vector that changes by a scalar factor when that linear
+      transformation is applied to it. The eigenvalue denotes the factor by which
+      the eigenvector is scaled.
