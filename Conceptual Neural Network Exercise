@@ -1,0 +1,13 @@
+Notice?
+The model is very bad and is not learning the patterns in the dataset, with a testing loss of about 0.5 after several hundred epochs.
+
+Increase the number of neurons in the hidden layer and try changing the activation function to something other than "Linear." 
+Model the data? 
+Neurons and what activation function allows you to effectively model the data?
+3 neurons in the hidden layer with a ReLU activation function models the data, with a testing loss of about 0.29 fairly quickly.
+
+Add more neurons, layers, or change anything you would like - can you model the data so that the testing loss is 0.01 or less? What is the smallest number of neurons and layers you can use that gives a test loss of 0.01 or less?
+2 hidden layers, each with 3 neurons, using a ReLU activation function will do this.
+
+Learning rate is?
+The learning rate controls how fast the model converges or finds the lowest loss. Smaller learning rates take a very long time to converge, while too large learning rates do not find the optimal solution.
