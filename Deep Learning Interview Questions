@@ -1,0 +1,52 @@
+Deep Learning - Interview Question Solutions
+
+1. When would you use a recurrent neural network?
+    - RNNs work well on sequential data - this can include time series data,
+      sound data, video data, natural language data, etc.
+
+2. How do recurrent neural networks work?
+    - At a high level, RNNs work using recurrent layers - in these layers,
+      the output of the layer is put “back into” that layer and combined with
+      the next iteration.
+
+3. What hyperparameters are available in LSTMs?
+    - There are many, but some commonly adjusted hyperparameters include:
+      Units, activation, return_sequences, etc.
+
+4. Explain neural networks to a non-technical coworker.
+    - Neural networks consist of various layers. You can think of each layer as
+      learning one pattern in the dataset. The data is fed forward through the
+      network and our layers are updated in order to minimize the error or come
+      up with the best predictions possible.
+
+5. Imagine you are using a neural network to classify images, but your image
+   dataset is very small. You need additional data to build a decent model but
+   you do not have access to any other images. What would you do?
+    - Image augmentation - like stretching, flipping, blurring, etc. of your
+      images - can create more images without having to gather additional data.
+
+6. How does backpropagation work?
+    - Backpropagation works through the process of gradient descent.
+      The gradient of the loss function with respect to the network’s weights
+      are calculated and then the weights are updated based on this.
+      This ultimately tries to find the minimum of the loss function.
+      The “back” part of backpropagation refers to this being done backwards
+      through the network - the calculation of the gradient proceeds backwards
+      through the network (final layer to first layer).
+
+7. What types of neural networks have you worked with?
+    - {answers will vary} Feed-forward, CNNs, RNNs. Give examples of projects
+      you have done that involve each of these networks.
+
+8. What types of datasets are neural networks best for?
+    - Very large datasets, complex datasets including image data, text data,
+      speech/sound data, etc.
+
+9. Why are CNNs good for image data?
+    - CNNs reduce the number of parameters without sacrificing quality - since
+      images have such large dimensions, this could take a long time without
+      methods like CNNs. They are also able to extract features from the images.
+
+10. What are the drawbacks of data augmentation?
+    - There is the potential that the augmented data does not reflect the
+      real world data, so the model will not be able to generalize well to new data.
