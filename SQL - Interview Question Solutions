@@ -1,0 +1,52 @@
+SQL - Interview Question Solutions
+
+1. Describe the different types of SQL joins.
+    - Inner join: only keeps the matching/corresponding rows between the tables.
+    - Outer join: keeps everything from both tables.
+    - Left join: keeps the entire left table, joining the rows in the right table
+      that match with rows on the left.
+      - Right join: keeps the entire right table, joining the rows in the left
+        table that match with the right.
+
+2. What is the difference between WHERE and HAVING in a SQL query?
+    - HAVING is used with aggregates.
+
+3. What is DBMS?
+    - A DBMS stands for database management system - it handles manipulation,
+      management, and maintenance of the database.
+
+4. What is RDBMS?
+    - A RDBMS, or relational database management system, manages relational
+      databases which are collections of tables related to each other through
+      common fields.
+
+5. What is a primary key?
+    - A primary key is a field that uniquely identifies rows.
+
+6. What is a foreign key?
+    - A foreign key is a field that refers to a primary key of another table.
+
+7. What is the difference between SQL and PostgreSQL?
+    - SLQ is a language standing for Structured Query Language.
+    - PostgreSQL is a database management system.
+
+8. Given a table with columns ‘a’, ‘b’, ‘c’, and ‘d’, write a query that selects
+  the average of column ‘b’ greater than a certain number n.
+        SELECT AVG(b)
+        FROM table
+        HAVING AVG(b) > n
+
+9. Given a table with columns ‘a’, ‘b’, ‘c’, and ‘d’, write a query that selects
+   all of the columns and orders them by column ‘a’ from highest value to lowest value.
+        SELECT *
+        FROM table
+        ORDER BY a DESC
+
+10. What does this query return:
+    SELECT e.LastName, o.ProductName
+    FROM orders o
+    INNER JOIN employees e
+     ON o.employee_id = e.id
+    WHERE LastName LIKE ‘B%’
+    - Returns the last name and product name of customers whose last names start
+      with the letter “B.”
